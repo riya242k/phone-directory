@@ -3,6 +3,7 @@ import Header from './Header.js';
 import './ShowSubscribers.css';
 import { tsConstructorType } from '@babel/types';
 import { render } from '@testing-library/react';
+import { Link } from 'react-router-dom';
 
 class ShowSubscribers extends Component {
  render() {
@@ -13,8 +14,9 @@ class ShowSubscribers extends Component {
   
   <Header heading="Phone Directory" />
   <div className="component-body-container">
-    <button className="add-btn custom-btn">Add</button>
-
+  <Link to="/add">
+  <button className="custom-btn add-btn">Add</button>
+  </Link>
     <div className="grid-container heading-container">
      <span className="grid-item name-heading">Name</span>
       <span className="grid-item phone-heading">Phone</span>
